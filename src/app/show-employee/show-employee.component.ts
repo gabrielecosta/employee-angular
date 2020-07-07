@@ -1,3 +1,4 @@
+import { EmployeeService } from './../employee.service';
 import { EMPLOYEES } from './../model/mock-employee';
 import { Employee } from './../model/employee';
 import { Component, OnInit } from '@angular/core';
@@ -9,11 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShowEmployeeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private employeeService: EmployeeService) { }
 
   ngOnInit(): void {
+    this.getEmployees();
   }
 
-  employees: Employee[] = EMPLOYEES;
+  employees: Employee[];
+
+  getEmployees():void {
+    this.employeeService.getEmployees()
+        .subscribe(employees => this.employees = employees);
+  }
 
 }
