@@ -23,4 +23,18 @@ export class ShowEmployeeComponent implements OnInit {
         .subscribe(employees => this.employees = employees);
   }
 
+
+  showEmployees: Employee[] = this.employees;
+
+  showAll(){
+    this.showEmployees = this.employees;
+  }
+
+  showActive(){
+    this.showEmployees = this.employees.filter( employee => employee.active == true);
+  }
+
+  showInactive(){
+    this.showEmployees = this.employees.filter( employee => employee.active == false);
+  }
 }

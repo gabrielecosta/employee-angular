@@ -1,6 +1,13 @@
-<p>Show Employee</p>
-<ul>
-    <li *ngFor="let employee of employees">
-        <p>{{employee.id}} {{employee.name}} {{employee.surname}} {{employee.active}}</p>
-    </li>
-</ul>
+<div>
+    <button (click)="showAll()">All</button>
+    <button (click)="showActive()">Active</button>
+    <button (click)="showInactive()">Inactive</button>
+</div>
+
+<div>
+    <ul class="list">
+        <li *ngFor="let employee of showEmployees" class="single">
+            <p>{{employee.id}} {{employee.name}} {{employee.surname}} {{employee.active}}</p>
+        </li>
+    </ul>
+</div>
