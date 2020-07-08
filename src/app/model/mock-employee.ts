@@ -18,5 +18,29 @@ export const EMPLOYEES: Employee[] = [
         name : "Gabriele",
         surname : "Costa",
         active : true
+    },
+    {
+        id : 4,
+        name : "Francesco",
+        surname : "Totti",
+        active : true
+    },
+    {
+        id : 5,
+        name : "Luciana",
+        surname : "Luciani",
+        active : false
+    },
+    {
+        id : 6,
+        name : "Filippo",
+        surname : "Filipponi",
+        active : false
+    },
+    {
+        id : 7,
+        name : "Maria",
+        surname : "Di Mario",
+        active : true
     }
 ];

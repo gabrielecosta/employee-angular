@@ -1,0 +1,59 @@
+.btn {
+    padding: 5px;
+    margin: 5px;
+}
+
+ul {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+ul li {
+    display: flex;
+    transition: 0.8s;
+    margin-bottom: 5px;
+}
+
+li:hover {
+    font-size: 18px;
+    height: 30px;
+    transition: 1.2s;
+    background: rgba(255, 255, 255, 0.5);
+    color: rgba(253, 13, 13, 0.736);
+}
+
+/*--Style if an employee is active (employee.active == true)*/
+.active {
+    background: rgba(182, 255, 239, 0.5);
+}
+
+.active .id {
+    font-size: 20px;
+    background: rgba(180, 210, 255, 0.781);
+    padding-right: 5px;
+}
+
+.active .name {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+/*--Style if an employee is inactive (employee.active == false)*/
+.inactive {
+    background: rgba(253, 23, 23, 0.5);
+}
+
+.inactive .id {
+    font-size: 20px;
+    background: rgba(253, 13, 13, 0.736);
+    padding-right: 5px;
+}
+
+.inactive .name {
+    margin-left: 5px;
+    margin-right: 5px;
+}
