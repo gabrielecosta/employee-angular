@@ -1,13 +1,16 @@
 <div>
-    <button (click)="showAll()">All</button>
-    <button (click)="showActive()">Active</button>
-    <button (click)="showInactive()">Inactive</button>
+    <button (click)="showAll()" class="btn">All</button>
+    <button (click)="showActive()" class="btn">Active</button>
+    <button (click)="showInactive()" class="btn">Inactive</button>
 </div>
 
 <div>
-    <ul class="list">
-        <li *ngFor="let employee of showEmployees" class="single">
-            <p>{{employee.id}} {{employee.name}} {{employee.surname}} {{employee.active}}</p>
+    <ul>
+        <li *ngFor="let employee of showEmployees" [class.active]="employee.active == true" 
+        [class.inactive]="employee.active == false">
+            <span class="id">{{employee.id}}</span>
+            <span class="name">{{employee.name}}</span>
+            <span class="surname">{{employee.surname}}</span>
         </li>
     </ul>
 </div>
